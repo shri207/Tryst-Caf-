@@ -1,0 +1,6 @@
+{
+  "name": "Tryst Café",
+  "description": "Premium, editorial-style website for Tryst Café — an artisan bakehouse, patisserie, specialty coffee, and all-day dining destination in Neelankarai, Chennai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

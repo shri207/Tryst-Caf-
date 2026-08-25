@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ivory: #F7F5EF;
+    --color-cream: #EFECE4;
+    --color-charcoal: #171717;
+    --color-black: #0B0B0B;
+    --color-warm-gray: #77736B;
+    --color-border-gray: #B8B4AA;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #F7F5EF;
+    color: #171717;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Cormorant Garamond', 'Newsreader', Georgia, serif;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', 'Newsreader', Georgia, serif;
+}
+
+.font-editorial {
+  font-family: 'Newsreader', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* GPU Acceleration & Performance */
+.gpu-layer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform, opacity;
+}
+
+/* Menu Geometric Border Motifs */
+.menu-ornament-border {
+  border: 1px solid #171717;
+  position: relative;
+}
+
+.menu-ornament-border::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid #171717;
+  pointer-events: none;
+}
+
+.menu-ornament-corner {
+  position: relative;
+}
+
+.menu-ornament-corner::before,
+.menu-ornament-corner::after {
+  content: '◆';
+  position: absolute;
+  font-size: 8px;
+  color: #171717;
+  line-height: 1;
+}
+
+/* Subtle image reveal effect */
+.img-editorial {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+  will-change: transform;
+}
+
+.img-editorial:hover {
+  transform: scale(1.035);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F5EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #B8B4AA;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #77736B;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
